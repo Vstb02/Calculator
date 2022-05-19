@@ -49,8 +49,16 @@ namespace Calculator
         {
             var num1 = Convert.ToDouble(textbox1.Text);
             var num2 = Convert.ToDouble(textbox2.Text);
-            var answer = num1 / num2;
-            Answer.Text = answer.ToString();
+
+            if (num2 == 0)
+            {
+                Answer.Text = "Обнаружено деление на ноль";
+            }
+            else
+            {
+                var answer = num1 / num2;
+                Answer.Text = answer.ToString();
+            }
         }
     }
 }
