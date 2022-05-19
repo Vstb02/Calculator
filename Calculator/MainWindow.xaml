@@ -7,6 +7,21 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="textbox1" TextWrapping="Wrap" Margin="95,102,266,144" Grid.RowSpan="2" Grid.ColumnSpan="2" TextChanged="textbox1_TextChanged"/>
+        <TextBox x:Name="textbox2" TextWrapping="Wrap" Margin="266,102,94,144" Grid.RowSpan="2" Grid.ColumnSpan="2" TextChanged="textbox1_TextChanged" Grid.Column="1"/>
+        <Label Content="Введите первое число" Margin="95,60,266,43" Grid.ColumnSpan="2"/>
+        <Label Content="Введите второе число" Margin="266,63,95,43" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <Button Content="Сложить" Margin="45,48,45,48" Grid.Row="1" Grid.Column="1" Click="Button_Click"/>
+        <TextBox x:Name="Answer" Grid.Column="1" HorizontalAlignment="Center" Margin="0,144,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="207" Grid.RowSpan="2" Height="45" TextChanged="TextBox_TextChanged"/>
     </Grid>
 </Window>
