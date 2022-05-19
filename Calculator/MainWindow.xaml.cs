@@ -44,5 +44,13 @@ namespace Calculator
             var answer = num1 + num2;
             Answer.Text = answer.ToString();
         }
+
+        private void Button_Click2(object sender, RoutedEventArgs e)
+        {
+            var num1 = Convert.ToDouble(textbox1.Text);
+            var num2 = Convert.ToDouble(textbox2.Text);
+            var answer = num1 / num2;
+            Answer.Text = answer.ToString();
+        }
     }
 }
